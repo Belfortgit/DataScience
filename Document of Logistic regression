@@ -1,0 +1,33 @@
+Customer Churn Prediction: Model Exploration and Evaluation
+This report analyzes customer churn in a telecommunications company using a Logistic Regression model. It details the Exploratory Data Analysis (EDA), feature engineering techniques, evaluation results, and potential challenges encountered during the project.
+
+Model Used: Logistic Regression
+
+Logistic Regression is a well-suited algorithm for binary classification tasks like churn prediction. It estimates the probability of an event (churning in this case) occurring based on a set of independent variables (customer features). The model outputs a value between 0 and 1, with higher values indicating a greater likelihood of churn.
+
+Exploratory Data Analysis (EDA)
+
+Correlation Matrix: Analyzing correlations between features revealed relationships that might influence churn. For example, a high correlation between "PhoneService" and "InternetService" suggests customers with both services might be less likely to churn.
+Churn by Contract Type: Visualizing churn distribution across contract types (monthly, yearly, etc.) identified contracts with higher churn rates. This information can be used to target specific customer segments with retention strategies.
+Feature Engineering
+
+A new feature, "TotalServices", was created by summing up service-related features. This combined feature provides insights into the relationship between the number of subscribed services and churn propensity.
+
+Evaluation Results
+
+The model's performance was evaluated using various metrics:
+
+Accuracy: Measures overall prediction correctness.
+Precision: Identifies the proportion of correctly predicted churners among all predicted churners.
+Recall: Identifies the proportion of actual churners correctly predicted by the model.
+F1-Score: A harmonic mean of precision and recall, providing a balanced view of model performance.
+Confusion Matrix: Visualizes how many predictions fell into each category (true positive, false positive, etc.).
+ROC Curve: The Receiver Operating Characteristic (ROC) curve helps assess the model's ability to discriminate between churners and non-churners. Analyzing the Area Under the Curve (AUC) provides a measure of this discrimination ability.
+Challenges Faced
+
+Imbalanced Data: The number of churned customers might be significantly lower than non-churned customers, leading to imbalanced data. This can impact model performance, requiring techniques like oversampling or undersampling to address the imbalance.
+Missing Data: Handling missing data effectively is crucial. Depending on the extent and nature of missing values, imputation techniques or data removal might be necessary.
+Hyperparameter Tuning: Tuning the hyperparameters of the Logistic Regression model (e.g., regularization parameters) can significantly improve its performance.
+Conclusion
+
+This project explored customer churn prediction using Logistic Regression. The analysis identified potential relationships between features and churn, and the model achieved a baseline performance for identifying at-risk customers. Addressing challenges like data imbalance and hyperparameter tuning can further enhance the model's accuracy and effectiveness in real-world applications.
